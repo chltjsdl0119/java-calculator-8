@@ -27,16 +27,17 @@ public class Numbers {
     }
 
     public int sum() {
-        int sum = numbers.stream()
-                .mapToInt(Integer::intValue)
-                .sum();
+        try {
+            int sum = 0;
 
-        // ArithmeticException 대신 IllegalArgumentException를 던진다.
-        if (sum > Integer.MAX_VALUE) {
-            throw new IllegalArgumentException("합계가 정수의 최대값을 초과했습니다.");
+            for (int number : numbers) {
+                sum = Math.addExact(sum, number);
+            }
+
+            return sum;
+        } catch (ArithmeticException e) {
+            throw new IllegalArgumentException("숫자의 합이 정수 범위를 초과합니다.");
         }
-
-        return sum;
     }
 
     private static void validateNumberFormat(String token) {
