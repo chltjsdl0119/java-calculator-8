@@ -23,9 +23,9 @@
 - [x] 구분자 값이 비어있을 경우 IllegalArgumentException을 발생시킨다.
 
 ### 3. 숫자 검증 및 파싱
-- [ ] 분리된 각 문자열을 정수로 변환한다.
-- [ ] 문자열에 숫자가 아닌 값이 포함되어 있다면 IllegalArgumentException을 발생시킨다.
-- [ ] 음수가 포함되어 있다면 IllegalArgumentException을 발생시킨다.
+- [x] 분리된 각 문자열을 정수로 변환한다.
+- [x] 문자열에 숫자가 아닌 값이 포함되어 있다면 IllegalArgumentException을 발생시킨다.
+- [x] 음수가 포함되어 있다면 IllegalArgumentException을 발생시킨다.
 
 ### 4. 계산
 - [ ] 분리된 모든 숫자를 더한 결과를 반환한다.
