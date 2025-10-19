@@ -5,7 +5,7 @@ public class Delimiter {
 
     private Delimiter(String value) {
         // 구분자 값이 비어있을 경우 IllegalArgumentException을 발생시킨다.
-        if (value == null || value.isEmpty()) {
+        if (value == null || value.isBlank()) {
             throw new IllegalArgumentException("구분자 값은 비어있을 수 없습니다.");
         }
 

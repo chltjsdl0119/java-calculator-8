@@ -19,7 +19,7 @@ public class Delimiters {
     public static Delimiters of(String customDelimiterValue) {
         List<Delimiter> delimiters = new ArrayList<>(DEFAULT_DELIMITERS);
 
-        if (customDelimiterValue != null && !customDelimiterValue.isEmpty()) {
+        if (customDelimiterValue != null && !customDelimiterValue.isBlank()) {
             delimiters.add(Delimiter.of(customDelimiterValue));
         }
 
