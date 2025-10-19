@@ -2,6 +2,7 @@ package calculator.domain.delimiter;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 public class Delimiters {
@@ -30,7 +31,7 @@ public class Delimiters {
     public String regex() {
         return values.stream()
                 .map(Delimiter::getValue)
-                .map(java.util.regex.Pattern::quote)
+                .map(Pattern::quote)
                 .collect(Collectors.joining("|"));
     }
 }
