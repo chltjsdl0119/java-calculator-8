@@ -42,6 +42,19 @@ class CalculatorTest {
         // Then
         assertEquals(6, result);
     }
+    
+    @Test
+    @DisplayName("정수 최대값 초과 입력 -> IllegalArgumentException 발생")
+    void addIntegerMaxValue() {
+        // Given
+        String input = "2147483647,1";
+
+        // When & Then
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> calculator.add(input)
+        );
+    }
 
     @Test
     @DisplayName("빈 문자열 입력 -> 결과 0")
