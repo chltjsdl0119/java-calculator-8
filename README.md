@@ -47,6 +47,15 @@
 
 ---
 
+## 프로그램 구조
+
+<img width="1047" height="964" alt="java-calculator-8 문자열 덧셈 계산기 프로그램 구조" src="https://github.com/user-attachments/assets/a9fe3cdd-17c3-4642-9850-0cb2b6e8f5ec" />
+
+- 협력하는 객체들의 공동체라는 것을 명심하며 다음과 같은 객체들을 선별하였습니다.
+- 입력과 출력을 담당하는 InputView와 OutputView, 계산 로직을 조율하는 Calculator, 문자열을 해석하는 StringParser, 구분자인 Delimiter, Delimiter를 관리하는 일급 컬렉션 Delimiters, 숫자들의 일급 컬렉션 Numbers를 중심으로 설계를 진행했습니다. 각 객체들은 자신의 역할에만 집중하도록 설계를 진행했고, Calculator 객체는 이들을 연결하여 최종적으로 계산을 수행하는 조정자(Facade) 역할을 담당했습니다.
+
+---
+
 ## 체크 리스트
 
 ### 자바 코드 컨벤션을 지키면서 프로그래밍했는가?
